@@ -18,9 +18,10 @@ const forecast = ((latitude, longitude, callback) => {
             const currentTemp = body.current.temperature
             const itFeels = body.current.feelslike
             const desc = body.current.weather_descriptions[0]
+            const humidity = body.current.humidity;
 
             //console.log(`Estamos a  ${currentTemp} but feels like ${itFeels} , ${desc}`)
-            callback( undefined, `Estamos a  ${currentTemp} but feels like ${itFeels} , ${desc}`)
+            callback( undefined, `Estamos a  ${currentTemp} but feels like ${itFeels} , ${desc} the humidity is ${humidity}.`)
             /*callback ( undefined, {
                 currentTemp : currentTemp ,
                 itFeels : itFeels,
